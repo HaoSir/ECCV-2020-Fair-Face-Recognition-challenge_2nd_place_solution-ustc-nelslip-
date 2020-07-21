@@ -1,15 +1,16 @@
 
 # ECCV 2020 Fair Face Recognition challenge 2nd_place_solution
-##reference resources
+## reference resources
 
 1.[insightface](https://github.com/deepinsight/insightface)
+
 2.[face.evoLVe.PyTorch](https://github.com/ZhaoJ9014/face.evoLVe.PyTorch)
 
 
-##Requirements
+## Requirements
 as shown in requirements.txt
-##Instructions to reproduce the test prediction
-###for docker users:
+## Instructions to reproduce the test prediction
+### for docker users:
 1. you need have installed docker and nvidia-docker.
 2. you should download the docker file from the [google drive](https://drive.google.com/file/d/1MxBHarqjvWNsl8UAS5mf0oJQetRWBQaT/view?usp=sharing)
 3. use the command to load the  docker file :docker load -i ustc_nelslip_submitv1.zip
@@ -22,10 +23,10 @@ sudo nvidia-docker run  -ti  -v  $test_image_path:/test/  -v $random_predictions
 2. $random_predictions_path -- any arbitrary file path to the random prediction file ,like /home/xxx/ECCV/ECCV_docker/random_predictions.csv
 3. $output_predictions_path -- any arbitrary directory, and the  final submitted prediction file would be generated in the directory. like /home/xxx/ECCV/ECCV_docker/predictions/
 
-##Instructions to retrain our models
+## Instructions to retrain our models
 1. prepare the orign train data, and the pretrained model from :
-[DSFD model](https://drive.google.com/file/d/1lX8-Nqcsx9qGw-ok563wqPJ_cpPkIOiU/view?usp=sharing)
-[IR_152 model](https://drive.google.com/file/d/1g41T38fanW857kA9oTowi5dndVLibGAV/view?usp=sharing)
+[DSFD model](https://drive.google.com/file/d/1lX8-Nqcsx9qGw-ok563wqPJ_cpPkIOiU/view?usp=sharing), 
+[IR_152 model](https://drive.google.com/file/d/1g41T38fanW857kA9oTowi5dndVLibGAV/view?usp=sharing), 
 [IR_50 model](https://drive.google.com/file/d/1LO1KRu8DFoHfBQjFt8nR1QIl5fOnBEXR/view?usp=sharing)
 2. use the command to obtain the face from given image: python crop_face.py --old_path xx --new_path xx
 3. change your config with config.py, and train your model with the command: python train_demo.py

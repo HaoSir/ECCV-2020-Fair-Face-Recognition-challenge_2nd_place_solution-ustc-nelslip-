@@ -1,6 +1,6 @@
 tensorboardX==1.9      
 tqdm==4.36.1 
-pip==19.2.3 
+pip==21.1 
 opencv-python==4.2.0.32 
 numpy==1.17.2
 pandas==0.25.1
